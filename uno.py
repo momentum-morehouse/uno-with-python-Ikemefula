@@ -45,10 +45,10 @@ class Deck:
 
     
 
-# deck = Deck(NUMBERS, COLORS)
-# shuffled = deck.shuffle()
-# for card in shuffled
-#     print(card)
+deck = Deck(NUMBERS, COLORS)
+shuffled = deck.shuffle()
+for card in shuffled
+    print(card)
 
 
 

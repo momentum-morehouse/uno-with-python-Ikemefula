@@ -9,8 +9,8 @@ class Card:
         self.number = number
         self.color = color
 
-    def ___str___(self):
-        return f"{self.color} {self.number}"   
+    def __str__(self):
+        return f"{self.number} {self.color}"   
 
 
 class Player:
@@ -28,7 +28,7 @@ class Deck:
         self.cards = []
         for number in numbers:
             for color in colors:
-                card = (color, number)
+                card = Card(color, number)
                 self.cards.append(card)
 
     def shuffle(self):
@@ -46,15 +46,29 @@ class Game:
         # make sure to pay attention to caps when using attributes
         # self.deck = Deck (capital letter)establishes the deck 
         # calling .shuffle at end the line of code will shuffle the cards 
+        self.player1 = Player(player_1_name)
+        self.player2 = Player(player_2_name)
+        # this will shuffle the deck
         self.deck = Deck(NUMBERS, COLORS).shuffle()
-        self.player1 = Player("Joe")
-        self.player2 = Player("Mary")
     # this is used to print every card in the deck 
+
         for card in self.deck: 
             print(card)
         print(self.player1, self.player2)
     
-    # pop will append one card from 
+    # def deal(self):
+    #determine order of dealing 
+        # how
+
+        # while len(self.player_2.hand) < 7:
+        #     card_1 = self.dock.pop()
+        #     self.player_1.hand.append(card_1)
+        #     card_2 = self.deck
+
+
+
+
+    # pop will append one card from the end and 
     def deal_cards(self):
         for i in range(7):
            self.player1.hand.append(self.deck.pop())
