@@ -57,16 +57,16 @@
 # if c < d: 
 #     print("c is less than d")
 # else:
-#     print("c is not less than d")
+#     print("c is NOT less than d")
 #     print("I don't think c is less than d")
 # print("outside of the if block")
 #                   ELSE IF / ELIF 
-# what if we wanted to dea with 3 cases?
+# what if we wanted to deal with 3 cases?
 # e = 20
 # f = 8 
 # if e < f:
 #     print("e is less than f")
-    # note that there is no colon at the end of the elif statement
+    
     # also notice that the double equal sign == is used to check if one value is equal to another.  
 # elif e == f: 
 #     print("e is equal to f")
@@ -77,17 +77,60 @@
 #     print("e is greater than f")
 
 
-g = 7 
-h = 8
-if g < h:
-    print("g is less than h")
-else:
-    if g == h: 
-        print("g is equal to h")
-    else:
-        print("g is greater than h")
+# g = 9
+# h = 8
+# if g < h:
+#     print("g is less than h")
+#     # within this else clause, we can create another if clause. 
+# else:
+#     if g == h: 
+#         print("g is equal to h")
+#     else:
+#         print("g is greater than h")
+    # this is the end of the else clause 
+
+
+#                               BMI CALCULATOR 
+# name = "Ike"
+# height_m = 1.8288
+# weight_kg = 86.18
+
+# The formula to calculate someones' bmi is their weight divided by their height to the power of 2. 
+# Breakdown: 
+    # bmi = weight / (height to the power of 2)
+# ** means to the power of
+# bmi = weight_kg / (height_m **2)
+# print(bmi)
+
+# if a person's bmi is over a certain percentage, we want to print a person is overweight 
+# if a person's bmi is under a certain percentage, we want to print a person is underweight
+# if a person's bmi is equal to a certain percentage, we want to print a person is average weight 
 
 name = "Ike"
-height_m = 2
-weight_kg = 90
+height_m = 1.8288
+weight_kg = 86.18
+average_bmi = 29.1
+# over_average_weight = 
+# under_average_weight = 
 
+
+# im curiuous as to why the elif statement did not work here 
+
+# bmi = weight_kg / (height_m **2)
+# print(bmi)
+# if bmi < average_bmi:
+#     print("You need to eat something, Cuz")
+#     elif bmi > average_bmi:
+#         print("You are over the average bmi")
+
+bmi = weight_kg / (height_m **2)
+print("bmi: "+ str(bmi))
+# print(bmi)
+if bmi < 30:
+
+    print(str(name) + " is not overweight")
+else: 
+
+    print(str(name) + " is overweight")
+
+       
